@@ -79,10 +79,12 @@ plot4MultiPlot <- function() {
         
         # Add the desired legend - top right, colors matching the data series
         # and use of lty="solid" to indicate lines in the legend
+        # There is no box around the legend, indicate with bty="n"
         legend("topright", 
                col=c("black", "red", "blue"), 
                legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-               lty="solid")
+               lty="solid",
+               bty="n")
         
         # Bottom right is last, and is the Global Reactive Power plot
         plot(datetime, 
